@@ -1,18 +1,50 @@
-.navbar {
-  border-radius: 0;
+/* ------------------------------------------- */
+/* General Styles */
+/* ------------------------------------------- */
+
+/* Ensure the main container has some top margin below the navbar */
+#main-content.container {
+    padding-top: 20px;
 }
 
-#mobile-menu {
-  background-color: #ddd;
+
+/* ------------------------------------------- */
+/* Content Section Styles (The Gray Box) */
+/* ------------------------------------------- */
+
+/* Style the section element inside the col-xs-12 container */
+#chicken-section section {
+    background-color: #AAAAAA; /* Gray background color as shown in mockups */
+    border: 1px solid #000; /* Border for definition */
+    padding: 15px; /* Add some padding inside the section */
+    margin-bottom: 30px; /* Add space below the section */
+    height: 1000px; /* Set a fixed height to force scrolling as requested */
+    overflow: auto; /* Allows content to scroll within the fixed height */
 }
 
-.menu-section {
-  background-color: #bdbdbd;
-  padding: 30px;
-  margin: 15px;
-  min-height: 1000px;
+/* Style the section heading */
+#chicken-section h2 {
+    color: #000; /* Black text for the heading */
+    margin-top: 0;
 }
 
-#mobile-menu li a {
-  border-bottom: 1px solid #999;
+
+/* ------------------------------------------- */
+/* Mobile Menu Styles (xs view) */
+/* ------------------------------------------- */
+
+/* Style for the mobile menu dropdown background color */
+/* Target the collapsed menu when it's open on mobile */
+#menu-dropdown {
+    background-color: #f8f8f8; /* Light gray background color (to distinguish it) */
+    border: 1px solid #e7e7e7; /* Add a slight border for distinction */
+}
+
+/* Ensure the full width is used for the dropdown content when active on mobile */
+@media (max-width: 767px) { /* Applies only to xs viewport */
+    #menu-dropdown.navbar-collapse.collapse.in {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
